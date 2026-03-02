@@ -19,3 +19,18 @@ Access control is the application of constraints on who or what is authorized to
 - Authentication - confirms that the user is who they say they are.
 - Session management - identifies which subsequent HTTP requests are being made by that same user.
 - Access control - determines whether the user is allowed to carry out the action that they are attempting to perform.
+
+## Day 2 - Examples of vertical Previlege escalation - 2 Mar
+
+vertical Previlege escalation - If a user can gain access to functionality that they are not permitted to access then this is vertical privilege escalation(VPE).
+
+For example, if a non-administrative user can gain access to an admin page where they can delete user accounts, then this is vertical privilege escalation
+
+happens when the application doesnt enforces protection for sensitive functionality
+
+ie administrative functions might be linked from an administrator's welcome page but not from a user's welcome page. However, a user might be able to access the administrative functions by browsing to the relevant admin URL.
+
+### Lab - 1 : Unprotected Admin functionality
+Aim : delete a/c carlos
+
+lab status : Done
