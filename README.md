@@ -32,5 +32,7 @@ ie administrative functions might be linked from an administrator's welcome page
 
 ### Lab - 1 : Unprotected Admin functionality
 Aim : delete a/c carlos
-
+ed
 lab status : Done
+
+editing URL and entering any admin page is called : security by obscurity
