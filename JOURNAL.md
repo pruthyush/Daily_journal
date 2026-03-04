@@ -32,7 +32,15 @@ ie administrative functions might be linked from an administrator's welcome page
 
 ### Lab - 1 : Unprotected Admin functionality
 Aim : delete a/c carlos
-ed
+
 lab status : Done
 
 editing URL and entering any admin page is called : security by obscurity
+
+## Day 3 - Lab - 2 : Unprotected admin functionality with unpredictable URL - 3 Mar
+
+Aim: Delete a/c Carlos
+
+lab status: Done
+
+## Day 4 - Parameter-based access control methods - 4 Mar
