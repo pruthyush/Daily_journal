@@ -44,3 +44,22 @@ Aim: Delete a/c Carlos
 lab status: Done
 
 ## Day 4 - Parameter-based access control methods - 4 Mar
+
+Some applications determine the user's access rights or role at login, and then store this information in a user-controllable location. This could be:
+
+1. A hidden field.
+2. A cookie.
+3. A preset query string parameter.
+
+The application makes access control decisions based on the submitted value.
+
+eg:- https://insecure-website.com/login/home.jsp?admin=true 
+     https://insecure-website.com/login/home.jsp?role=1
+
+Lab - 3 : User role controlled by request parameter
+
+Aim: access the admin panel and using it to delete the user carlos. 
+
+Hint: You can log in to your own account using the following credentials: wiener:peter
+
+lab status: Pending
