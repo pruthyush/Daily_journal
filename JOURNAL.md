@@ -63,3 +63,8 @@ Aim: access the admin panel and using it to delete the user carlos.
 Hint: You can log in to your own account using the following credentials: wiener:peter
 
 lab status: Pending
+
+## Day 5 - Completing Lab with Burpe Suite and continue academy
+
+Installed burpe suite
+
