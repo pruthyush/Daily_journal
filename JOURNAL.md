@@ -66,5 +66,5 @@ lab status: Pending
 
 ## Day 5 - Completing Lab with Burpe Suite and continue academy
 
-Installed burpe suite
+Installed burp suite
 
