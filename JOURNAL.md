@@ -68,3 +68,132 @@ lab status: Pending
 
 Installed burp suite
 
+## Day 6 - Due to Lack of knowledge starting from the fundamentals
+
+### HTTP fndms - type in browser > browser send "req" > server sends "resp"
+
+Browsr => Req  |  Server => Resp
+
+BASIC WORKING OF REQ AND RESP WHEN LOADING A WEB
+
+Browsr Req:       GET /product HTTP/1.1 | Host: `example.com`
+
+Server Resp:      HTTP/1.1 200 OK | Content-Type: text/html
+
+Webpage Loads
+
+### Structure of HTTP Req (3 main parts)
+
+1. Request line : "Give me this page"
+
+   "GET /login HTTP/1.1" | This contains : Method → "GET" ,Path → "/login", Protocol → "HTTP/1.1"
+
+2.Header : Gives extra information to server
+
+  Host: example.com | User-Agent: Chrome | Cookie: session=abc123
+
+  Host → which website is needed | User-Agent → type of browser using | Cookie → login session data
+
+3. Req Body : Used mainly in POST Req
+
+   username=admin&password=123
+
+   Use cases are Login forms, File uploads , Search Queries
+
+### HTTP Meathods : Tells server what action to perform
+
+GET : Used to retrieve data 
+  
+  Eg : "GET /profile" - translates to :get me the profile page
+       "/product?id=10" - get request always have some parameters in the URL
+  
+POST : used to send data to the server
+
+  Eg : "POST /login" | data send in body - "username=admin password=123"
+
+PUT : Used to update the existing data
+
+  Eg : "PUT /user/123" , Some api allow file uploads with PUT this is abused by attackers
+
+DELETE : Used to delete resources
+
+  Eg : "DELETE /account/123" , If access control is weak attackers may delete other user account
+
+PATCH : Used for partially update resources
+
+  Eg : "PATCH /profile" -Chanegs just one field like email
+
+### HTTP Response Structure - Sever sends back to the browsr
+
+EG : "HTTP/1.1 200 OK , Content-Type: text/html"
+   
+   *Response part (status Line): 'HTTP/1.1 200 OK' 
+   Protocol - HTTP/1.1, Status code - 200 , Message - OK*
+  
+   *Response Headers : 'Content-Type: text/html Set-Cookie: session=xyz' 
+   Content-type - File type , Set-Cookie - login session, [extra] Location - redirection*
+
+   *Response Body : Contains the Webpage Contents*
+    
+  EG: `<html>`
+      `<h1>Welcome</h1>`
+      `</html>`
+
+### HTTP Status code (IMPORTANT)
+
+**200 - SUCCESS | Request Worked**
+  Eg: `HTTP/1.1 200 OK`
+
+**301/302 - Redirect** 
+  Eg: `Location: /login`
+
+**403 - Forbidden | Access denied**
+  Eg: `Trying to access Admin Pannel`
+
+**404 - Not found | Page doesnt exist**
+
+**500 - Sever Error | Server crashed or misconfigured, Sometimes indiacte vulnuerablities**
+
+### URL Structure
+
+Eg for URL: `https://example.com/product?id=10`
+
+*Protocol - `https`, Domain - `example.com`, Path -`/product`, Paramter - id=10 (Parameters are very important for attcks)*
+
+### Query Parameters
+
+Eg : `/search?q=laptop`
+
+*Parameter - q=laptop | [atkr tries to modify values ie: `q=' OR 1=1` this triggers **SQL injection**]*
+
+### Headers for Security Testing [Imp for Hacking]
+
+**Cookie : Used to maintain login state**
+
+*eg: `Cookie: session=abc123` **[if stolen atckr logs in as victim]***
+
+**Authorization : Used in APIs**
+
+*eg: `Authorization: Bearer token123` **[If stolen atckr access restricted data]***
+
+**Referer : Some Website *Trust* this header incorrectly**
+
+*eg: `Referer: https://example.com/login`
+
+### **Stateless** Nature of HTTP
+
+Http is stateless means the server does not remeber previous *req*
+
+*eg: `GET /profile`* |  *`GET /settings`* - **Racist Server** [Server treat them seperately] 
+
+*Session and cookies are used to maintain the state*
+
+### Why need of HTTP
+
+Every vul happns in *req* and *resp*
+
+eg : 
+- **SQL Injection - manipulates parameters**
+- **IDOR[insecure direct object response] - changing IDs**
+- **Authenticatn bypass - Modifying login req**
+- **CSRF[Cross site req forgery] - abusing POST req**
