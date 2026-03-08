@@ -1,6 +1,6 @@
 # Daily journal of a Student to Professional
-###### why a journal - When I was OTW to home I felt stuck like Im not reaching my destination and I was so impatient to reach the destination at the end I reached then I got thisthought everything takes time and patience
-This is a daily journal that kept for the portswigger web academy which I started in my masters program . What I learned and what I experienced are recorded here.
+##### ***why a journal? - When I was OTW to home I felt stuck like Im not reaching my destination and I was so impatient to reach the destination but at the end I reached then I got this thought of everything takes time and patience so this is for me to enjoy the journey that I can look back at a certain point and say "what level have I reached"***
+This is a daily journal that kept updating in my masters program . What I learned and what I experienced are recorded here.
 ## Day 0 - Preparation [core]- 1 Mar
 - Access control vulnerabilities
 - Authentication vulnerabilities
