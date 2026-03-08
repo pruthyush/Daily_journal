@@ -199,3 +199,43 @@ eg :
 - **Authenticatn bypass - Modifying login req**
 - **CSRF[Cross site req forgery] - abusing POST req**
 
+
+### ***BURP SUITE BASICS***
+
+#### 1. Burp suite - sec test proxy tool 
+
+**BROWSR** <=> **BURP SUITE** <=> **INTERNET** <=> **SERVER**
+
+- Capture req
+- modify them
+- send them *again*
+- Analyze responses
+
+Instead of brwsr talking directly the traffic passes through Burp this allows us to **Intercept and Manipulate req**
+
+#### 2. CORE CONCEPTS
+
+Every webst snds a req : `GET /profile HTTP/1.1 | Host: example.com | Cookie: session=abc123`
+
+Server resp : `HTTP/1.1 200 OK`
+
+Normally we cannot modify req but Burp we can intercept and chnge anything
+
+eg attk: 
+  OG req :`GET /account?id=101` | Mod req : *`GET /account?id=102`* (note : 101 -> 102) 
+  If this returns another user data : IDOR Vul
+
+#### 3. **Proxy - Heart of Burp**
+
+Proxy capts traffics from browsr[(In burp suite) PROXY => INTERCEPT ]
+
+when enabled the req are paused before sending them to the server 
+  
+  eg for captured req:
+  `GET /login HTTP/1.1 | Host: site.com | Cookie: session=123`
+
+### 4. Setting up browsr with burp
+
+burp listen on : `127.0.0.1:8080`
+
+### 5. 
