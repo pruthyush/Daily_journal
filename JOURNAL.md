@@ -70,7 +70,7 @@ Installed burp suite
 
 ## Day 6 - Due to Lack of knowledge starting from the fundamentals
 
-### HTTP fndms - type in browser > browser send "req" > server sends "resp"
+### 1. HTTP fndms - type in browser > browser send "req" > server sends "resp"
 
 Browsr => Req  |  Server => Resp
 
@@ -82,7 +82,7 @@ Server Resp:      HTTP/1.1 200 OK | Content-Type: text/html
 
 Webpage Loads
 
-### Structure of HTTP Req (3 main parts)
+### 2. Structure of HTTP Req (3 main parts)
 
 1. Request line : "Give me this page"
 
@@ -100,30 +100,31 @@ Webpage Loads
 
    Use cases are Login forms, File uploads , Search Queries
 
-### HTTP Meathods : Tells server what action to perform
+### 3. HTTP Meathods : Tells server what action to perform
 
-GET : Used to retrieve data 
+**GET** : Used to retrieve data 
   
   Eg : "GET /profile" - translates to :get me the profile page
-       "/product?id=10" - get request always have some parameters in the URL
+       
+  *`/product?id=10` - get request always have some parameters in the URL*
   
-POST : used to send data to the server
+**POST** : used to send data to the server
 
   Eg : "POST /login" | data send in body - "username=admin password=123"
 
-PUT : Used to update the existing data
+**PUT** : Used to update the existing data
 
   Eg : "PUT /user/123" , Some api allow file uploads with PUT this is abused by attackers
 
-DELETE : Used to delete resources
+**DELETE** : Used to delete resources
 
   Eg : "DELETE /account/123" , If access control is weak attackers may delete other user account
 
-PATCH : Used for partially update resources
+**PATCH** : Used for partially update resources
 
   Eg : "PATCH /profile" -Chanegs just one field like email
 
-### HTTP Response Structure - Sever sends back to the browsr
+### 4. HTTP Response Structure - Sever sends back to the browsr
 
 EG : "HTTP/1.1 200 OK , Content-Type: text/html"
    
@@ -139,7 +140,7 @@ EG : "HTTP/1.1 200 OK , Content-Type: text/html"
       `<h1>Welcome</h1>`
       `</html>`
 
-### HTTP Status code (IMPORTANT)
+### 5. HTTP Status code ***(IMPORTANT)***
 
 **200 - SUCCESS | Request Worked**
   Eg: `HTTP/1.1 200 OK`
@@ -160,7 +161,7 @@ Eg for URL: `https://example.com/product?id=10`
 
 *Protocol - `https`, Domain - `example.com`, Path -`/product`, Paramter - id=10 (Parameters are very important for attcks)*
 
-### Query Parameters
+### 6. Query Parameters
 
 Eg : `/search?q=laptop`
 
@@ -180,15 +181,15 @@ Eg : `/search?q=laptop`
 
 *eg: `Referer: https://example.com/login`
 
-### **Stateless** Nature of HTTP
+### 7. ***Stateless*** Nature of HTTP
 
-Http is stateless means the server does not remeber previous *req*
+Http is **stateless** means the server does not remeber previous *req*
 
 *eg: `GET /profile`* |  *`GET /settings`* - **Racist Server** [Server treat them seperately] 
 
 *Session and cookies are used to maintain the state*
 
-### Why need of HTTP
+### 8. Why need of HTTP
 
 Every vul happns in *req* and *resp*
 
@@ -197,3 +198,4 @@ eg :
 - **IDOR[insecure direct object response] - changing IDs**
 - **Authenticatn bypass - Modifying login req**
 - **CSRF[Cross site req forgery] - abusing POST req**
+
