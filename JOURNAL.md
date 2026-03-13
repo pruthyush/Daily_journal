@@ -238,4 +238,8 @@ when enabled the req are paused before sending them to the server
 
 burp listen on : `127.0.0.1:8080`
 
-### 5. 
+## Day 7 Again on burp suite(Portswigger apprentice) - 13 Mar
+
+Due to some mental pressure i havent been myself today i will go for the basic start of the burp suite i e choosing the **apprentice learning path**
+
+
