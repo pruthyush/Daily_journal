@@ -242,4 +242,11 @@ burp listen on : `127.0.0.1:8080`
 
 Due to some mental pressure i havent been myself today i will go for the basic start of the burp suite i e choosing the **apprentice learning path**
 
+Path Traversal(Directory Traversal) -  vulner enable an attacker to read arbitrary files on the server that is running an application this includes:
+
+1. Application code and data
+2. Credentials for back-end systems
+3. Sensitive operating system files
+
+*`an attacker might be able to write to arbitrary files on the server, allowing them to modify application data or behavior, and ultimately take full control of the server.`*
 
