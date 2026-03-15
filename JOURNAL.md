@@ -250,3 +250,6 @@ Path Traversal(Directory Traversal) -  vulner enable an attacker to read arbitra
 
 *`an attacker might be able to write to arbitrary files on the server, allowing them to modify application data or behavior, and ultimately take full control of the server.`*
 
+## Day 8 - Mind that going off rail But will go through it from the start (*Revising*)
+
+Due to my mental and stress due to overthinking, I am becoming more and more depressed when doing stuff. I should be doing stuff that is really important to me, I need to concentrate on my goals not hopeless and unreliable realities.
